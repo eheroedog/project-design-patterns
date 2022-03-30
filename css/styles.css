@@ -1,0 +1,457 @@
+/*Mobile First*/
+
+/*ESTANDARES DE TAMAÑOS DE PANTALLAS 
+
+// TELEFONOS
+@media (min-width:576px){
+
+}
+// TABLETS
+@media (min-width:768px){
+
+}
+// LAPTOPS Y PC ESCRITORIO 
+@media (min-width:992px){
+
+}
+// TELEVISIONES
+@media (min-width:1200px ){
+
+}
+*/
+/*
+
+h1{
+	font-size:40px;
+	text-align:center;
+	
+}
+.navegacion a {
+	display:block;
+	text-align:center;
+}
+@media (min-width:768px){
+	
+	.navegacion a{
+		display: flex;
+	}
+	
+}
+
+@media (min-width:768px){
+
+	h1{
+		text-align: left;
+	}
+
+}*/
+
+/*Desktop First*/
+/*
+h1{
+	color: blue;
+}
+
+@media (max-width:800px){
+	h1{
+		color:red;
+	}
+}
+
+@media (max-width:480px){
+	h1{
+		color:green;
+		text-align: center;
+	}
+}
+
+@media (max-width:480px){
+	.navegacion a{
+		display: block;
+		text-align: center;
+	}
+}*/
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%;	/*1rem = 10px de 16 por defecto, es decir el 62.5% de 16 es 10px*/
+}
+
+*, *:before, *:after{
+	box-sizing:inherit;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:1.6rem;
+	line-height: 2;
+}
+
+/*GLOBALES*/
+
+.contenedor{
+	margin:0 auto;
+	max-width: 120rem;	/*90rem a 120rem por los tamaños de pantalla*/
+	width: 95%;
+}
+
+h1, h2, h3, h4{
+	font-family: 'PT Sans', sans-serif;
+}
+
+h1{
+	font-size: 4.8rem;
+}
+
+h2{
+	font-size: 4rem;
+	line-height: 1.2;
+}
+
+h3{
+	font-size: 3.2rem;
+}
+
+h4{
+	font-size:2.8rem;
+}
+
+img{
+	max-width: 100%;
+}
+
+/*UTILIDADES*/
+
+.centrar-texto{
+	text-align: center;
+}
+
+.no-margin{
+	margin:0;
+}
+
+@media (min-width:768px){					/*esta media query es para posicionar la imagen y su texto que 
+											lleva con sigo para que se pongan con su display flex y cada
+											uno tome el 50% dentro del contenedor de la pagina*/
+	.grid{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
+	}
+	
+	.columnas-4{
+		flex-grow:0;
+		flex-shrink:0;
+		flex-basis:calc(33.3% - 1rem);
+	}
+
+	.columnas-8{
+		flex-grow:0;
+		flex-shrink:0;
+		flex-basis:calc(66.6% - 1rem);
+	}
+
+	.columnas-6{
+			flex-grow:0;
+			flex-shrink:0;
+			flex-basis:calc(50% - 1rem);
+		}
+
+	.columnas-10{					/*esta clase se utilizo para centrar el formulario*/
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: calc(83.33% - 1rem);	/*este valor se calculo con 12 columnas son 100%
+											se dividio 100/12 y el resultado se multiplico
+											por 10 y es el valor para centrar el formulario*/
+	}
+
+	.columnas-12{
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 100%;
+	}
+
+	.centrar-columnas{
+		justify-content: center;
+	}
+}
+
+/*ESTILOS PARA LOS BOTONES*/
+
+.btn{
+	color:white;
+	display:block;
+	font-family: 'PT Sans',Sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 2rem 0;
+	padding: 1rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	flex:0 0 100%;
+
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+
+@media (min-width:768px){
+	.btn{
+		display: inline-block;		/*se establece el display en inline-block para que el tamaño del boton
+									lo defina el padding*/
+		flex:0 0 auto;
+	}
+}
+
+.btn-primario{
+	background-color:black;
+}
+
+.btn-secundario{
+	background-color: brown;
+}
+
+
+/*ESTILOS PARA EL ENCABEZADO*/
+
+/*media query del encabezado*/
+@media (min-width:768px){ /*esta media query es para que a partir de los 768px hasta xpx de la pantalla del navegador
+							los elementos que estan en la clase .barra en este caso el enlace de BlogDeCafe y
+							los enlaces de la navegacion tengan este comportamiento*/
+	.barra  {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.site-header{
+	
+	background-image:url(../img/banner.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	height:60rem;
+	
+}
+
+.site-header a {
+	
+	color:#ffffff;
+	text-decoration:none;
+	
+}
+
+.site-header h1{
+	
+	text-align:center;
+	font-weight:400;
+}
+
+.site-header h1 span{
+	
+	font-weight:700;
+	
+}
+/*ESTILOS A LA NEVEGACION DEL HEADER*/
+
+.navegacion a{
+	color: white;
+	display:block;
+	font-size: 1.8rem;
+	text-align:center;
+	text-decoration: none;
+}
+
+@media (min-width:768px){/*este es complemento de la media query del encabezado, es para poner los enlaces
+						de la navegacion de forma consecutiva es decir uno tras otro de forma horizontal
+						y con un espacio entre estos enlaces*/
+	.navegacion a {	
+		display: inline;
+		margin-right: 2rem;
+	}
+
+	.navegacion a:last-of-type{
+		margin:0;
+	}
+	
+}
+/*ESTILOS PARA EL TEXTO DEL HEADER*/
+
+.texto-header{
+	
+	color:#ffffff;
+	text-align:center;
+	margin-top:5rem;
+}
+
+.texto-header p {
+	
+	font-size:2.2rem;
+	
+}
+
+/*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
+
+.contenido-principal{
+	display: flex;					
+	flex-wrap: wrap;
+	/*flex-direction: column-reverse;*/
+}							
+								
+.blog, 
+.cursos{
+
+	flex-grow: 0;					/*--------*//*la propiedad flex-grow con valor de 1 es para que el contenido de esta clase 
+									cresca, sí es posible y con valor de 0 no crece se queda del tamaño de la base
+									flex-basis*/
+
+
+								
+	flex-shrink: 0;					/*---flex-shrink-----*//*esta propiedad es para que el contenido de esta clase no se haga mas pequeño. 
+									por defecto tiene el valor de 1 pero con el valor de 0 va agarrar el tamaño
+									de la base flex-basis*/
+	flex-basis: 100%;				
+}
+
+.cursos{
+	order:-1; 							/*esta propiedad se utilizo para cambiar el orden en que se visualiza 
+										el contenido de la pagina web, en este caso la eetiqueta HTML aside con
+										la clase .cursos aparece primero que la etiqueta HTML main con la clase
+										.blog */
+}
+
+@media (min-width:768px){
+
+	.contenido-principal{
+		justify-content: space-between;
+	}
+
+	.blog{
+		flex-basis: 66.6%;				/*esto es para que el contenido de la clase .blog tome el 66.6% del contenedor
+										*/
+	}
+
+	.cursos{
+		flex-basis:calc(33.3% - 4rem);	/*esto es para que el contenido de la clase .cursos tome el 33.3% menos los
+										4rem de separacion entre éste y la de .blog*/	
+		
+		order:2;						/*con esto se invierte el orden de visualizacion en este caso como quedo
+										la clase .cursos primero, pues se tuvo que poner en order 2 para que 
+										apareciera despues */
+	}
+}
+
+.entrada-blog{
+	margin-bottom:2rem;
+	border-bottom:.1rem solid #e1e1e1;
+}
+
+.entrada-blog:last-of-type{
+	border:none;
+}
+
+/*ESTILOS PARA LA PARTE DE CURSOS LA BARRA LATERAL*/
+
+.cursos-lista{
+	padding:0;
+	list-style: none;
+}
+
+.curso{									/*esta clase tambien se utilizo en la pagina de
+										cursos.html*/
+	border-bottom:.1rem solid #e1e1e1;	/*esta propiedad se utilizó para separar cursos*/
+	padding-top:3rem;					/*para dar separacion, igual se puede poner margin*/
+}
+
+.curso:last-of-type{
+	border:none;
+}
+
+.curso p{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: 700; 
+	
+}
+
+.curso p.descripcion{						/*curso.html*//*esta se utilizo en la pagina cursos.html*/
+	
+	font-weight:400;
+	
+}
+
+.curso p span{
+	font-weight: 400;
+}
+
+/*ESTILOS PARA EL PIE DE PAGINA*/
+
+.site-footer{
+	background-color: black;
+	padding:3rem;
+	margin-top: 4rem;
+}
+
+.site-footer p{
+	color:white;
+	font-size: 4rem;
+	font-family: 'PT Sans',sans-serif;
+	font-weight: 400;
+	text-align: center;
+	margin: 0;
+
+}
+
+.site-footer p span{
+	font-weight: 700;
+}
+
+/*ESTILOS PARA EL MAIN DE cursos.html*/
+
+/*ESTILOS PARA EL LA PARTE DE CONTACTO*/
+
+.formulario-contacto{
+	background-color: #ffffff;
+	padding: 5rem;
+}
+
+@media (min-width:768px){
+	.formulario-contacto{
+		margin-top: -10rem;			/*el valor negativo es para traslapar el formulario
+									en la imagen*/
+	}
+}
+
+.campo{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.campo label{
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 8rem;
+}
+
+.campo input:not([type="submit"]), .campo textarea{
+	flex: 1;
+	border:1px solid #e1e1e1;
+	padding:1rem;
+}
+
+.campo textarea{
+	height: 20rem;
+}
+
+.enviar{						/*esta clase se utilizo para posicionar al boton de lado derecho del
+								formulario*/
+	display: flex;
+	justify-content: flex-end;	
+}
+
+
+
