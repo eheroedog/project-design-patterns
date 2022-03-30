@@ -38,6 +38,11 @@ public class Console implements UI {
 	}
 
 	@Override
+	public String toString() {
+		return "Console [pMark=" + pMark + ", eMark=" + eMark + "]";
+	}
+
+	@Override
 	public Position askForMove() {
 		String positionInput = System.console().readLine("Enter your move '"+pMark+"' (x,y): ");
 		int x = Integer.parseInt(positionInput.split(",")[0]);
