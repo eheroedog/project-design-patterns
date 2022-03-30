@@ -20,4 +20,11 @@ public class PlayerOb implements Player {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "PlayerOb ["+ui.toString()+"]";
+	}
+
+	
+
 }
