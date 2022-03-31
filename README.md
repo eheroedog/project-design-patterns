@@ -16,6 +16,10 @@
 
  We use the strategy pattern help with the implementation of different operators for our calculator project.
 
+ Included in the folder is a JAR file to run the project in terminal.
+
 ### Builder-RPGCharacterCreator
 
  When we create new characters we take advantage of the builder pattern to create an object of our desired character.
+
+ Included in the folder is a JAR file to run the project in terminal.
