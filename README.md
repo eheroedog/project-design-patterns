@@ -1,6 +1,6 @@
-# Final-Project
+# Design Patterns
  
- Projects which include the following 5 different design Patterns:
+ Projects include the following 5 different design Patterns:
 
  - Strategy
  - Builder
@@ -8,9 +8,6 @@
  - Factory method (unconfirmed)
  - Composite (unconfirmed)
 
-    Example code:
-    ```
-    public static void main(String[] args) {
-            new Builder().build().play();
-        }
-    ```
+### Observer-Squeaker
+ 
+ In this project that takes inspiration from a certain social media platform we apply the observer pattern so the followers of a certain **SqueakerProfile** can be updated when they post new squeaks.
