@@ -1,10 +1,12 @@
-package com.twotter.ui;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
+package com.squeaker.ui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class LaunchWindow implements ActionListener{
 	
@@ -23,6 +25,12 @@ public class LaunchWindow implements ActionListener{
 		frame.setSize(420,420);
 		frame.setLayout(null);
 		frame.setVisible(true);
+		frame.setTitle("Squeaker");
+		
+		URL iconURL = getClass().getResource("/res/squeakerIcon.png");
+		ImageIcon icon = new ImageIcon(iconURL);
+		frame.setIconImage(icon.getImage());
+		
 	}
 
 	@Override

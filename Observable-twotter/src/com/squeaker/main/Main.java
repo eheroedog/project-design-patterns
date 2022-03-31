@@ -1,6 +1,6 @@
-package com.twotter.main;
+package com.squeaker.main;
 
-import com.twotter.ui.LaunchWindow;
+import com.squeaker.ui.LaunchWindow;
 
 public class Main {
 
