@@ -10,15 +10,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		//Computer test = new ComputerBuilder().setCpu("Intel i5 2500k").setMotherboard("Generic Gigabyte LGA1155").setHdd(1000).setPcCase("Generic Full tower").getComputer();
-		
 		System.out.println("~~~RPG Character~~~");
 		boolean flag = true;
 		
 		RpgCharacter myCharacter = null;
 		
 		while(flag) {
-			//System.out.println("Create new character? (Y,N)");
 			System.out.println("Creating new character");
 			System.out.println("Input name: ");
 			var name =  System.console().readLine();

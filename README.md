@@ -12,7 +12,7 @@
  
  In this project we apply the observer pattern so the followers of a **SqueakerProfile** can be updated when the profile posts a new **squeak** withour the follower need to constantly check for new posts on the profile.
 
-Profile
+**Profile**
  ```
 @Override
 	public void notify(Squeak sqk) {
@@ -26,7 +26,7 @@ Profile
 	}
  ```
 
- Follower
+ **Follower**
  ```
 @Override
 	public void update() {
@@ -66,5 +66,15 @@ binOp.forEach(x -> System.out.print(x.getName().equals(operator) ? "Result: " + 
 ### Builder-RPGCharacterCreator
 
  When we create new characters we take advantage of the builder pattern to create an object of our desired character.
+
+ ```
+switch (charclass.toLowerCase()) {
+			case "rogue":
+				myCharacter = new Rogue().setName(name).setRace(race).setGender(gender).setSkills().setAttributes().setClass().build();
+				break;
+			case "mage":
+				myCharacter = new Mage().setName(name).setRace(race).setGender(gender).setSkills().setAttributes().setClass().build();
+				break;
+ ```
 
  Included in the folder is a JAR file to run the project in terminal.
