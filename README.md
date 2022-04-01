@@ -77,4 +77,6 @@ switch (charclass.toLowerCase()) {
 				break;
  ```
 
+![Created Character](https://prnt.sc/5bre2JwMP8tw "Created Character")
+
  Included in the folder is a JAR file to run the project in terminal.
