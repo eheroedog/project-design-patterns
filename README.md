@@ -5,8 +5,8 @@
  - Strategy
  - Builder
  - Observer
- - Factory method (unconfirmed)
- - Composite (unconfirmed)
+ - Singleton (unconfirmed)
+ - Command (unconfirmed)
 
 ### Observer-Squeaker
  
